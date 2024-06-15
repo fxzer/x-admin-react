@@ -2,6 +2,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import UnoCSS from 'unocss/vite'
 
 const _dirname = fileURLToPath(new URL('.', import.meta.url))
 
@@ -9,6 +10,7 @@ const _dirname = fileURLToPath(new URL('.', import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
+    UnoCSS(),
   ],
   resolve: {
     alias: {
