@@ -1,9 +1,9 @@
 function Login() {
-  return ( 
+  return (
     <div>
       Login works!
     </div>
-   );
+  )
 }
 
-export default Login;
+export default Login
