@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
+import { useCounterStore } from '@/store'
 
 function Login() {
   const [date, setDate] = useState<Date | undefined>(new Date())
+  const { count, inc, dec } = useCounterStore()
   return (
     <div>
       Login works!
-      <button className="border-1 border-border">button</button>
+      <div className="bg-green/20">
+
+        {count}
+        <Button onClick={inc}>+</Button>
+        <Button onClick={dec}>-</Button>
+      </div>
+      <button type="button" className="border-1 border-border">button</button>
       <div className="h-screen">
         <Button>123</Button>
         <Calendar
