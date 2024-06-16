@@ -1,17 +1,20 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 import A from './components/A'
 
 import B from './components/B'
 import { Button } from '@/components/ui/button'
+import { useLocale } from '@/locale'
 
 function Login() {
+  const { t } = useTranslation()
+  const { setLang } = useLocale()
   return (
     <div>
-
+      {t('Welcome to React')}
       <div className="h-screen">
         Login works!
 
-        <button type="button" className="border-1 border-border">button</button>
+        <button type="button" className="border-1 border-border" onClick={() => setLang('zh')}>changeLang</button>
         <div className="my-10 border-1"></div>
         <B></B>
         <A></A>
