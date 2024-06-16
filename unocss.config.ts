@@ -15,7 +15,7 @@ export default defineConfig({
   presets: [
     presetRemToPx(),
     presetAttributify(),
-    presetIcons({ /* options */ }), // 以 CSS 方式使用 iconify
+    presetIcons({}), // 以 CSS 方式使用 iconify
     presetUno(),
     presetAnimations(),
     presetShadcn({
@@ -25,9 +25,6 @@ export default defineConfig({
     transformerDirectives(), // @apply, @screen, @variants
     transformerVariantGroup(), // 样式分组
   ],
-  // By default, `.ts` and `.js` files are NOT extracted.
-  // If you want to extract them, use the following configuration.
-  // It's necessary to add the following configuration if you use shadcn-vue or shadcn-svelte.
   content: {
     pipeline: {
       include: [
