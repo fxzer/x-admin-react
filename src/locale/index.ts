@@ -21,10 +21,11 @@ type Locale = 'en' | 'zh'
 export function useLocale() {
   const { i18n } = useTranslation()
   const locale = (i18n.resolvedLanguage || 'zh') as Locale
-  const langs = {
-    en: 'English',
-    zh: '简体中文',
-  }
+  const langs = [
+    { label: 'English', value: 'en', icon: '🇺🇸' },
+    { label: '中文', value: 'zh', icon: '🇨🇳' },
+
+  ]
   const setLang = (locale: Locale) => {
     i18n.changeLanguage(locale)
   }

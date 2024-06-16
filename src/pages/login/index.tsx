@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next'
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
 import A from './components/A'
-
 import B from './components/B'
+import ReactLogo from '~icons/logos/react'
 import { Button } from '@/components/ui/button'
 import { useLocale } from '@/locale'
+import DarkToggle from '@/components/common/DarkToggle'
 
 function Login() {
   const { t } = useTranslation()
@@ -12,8 +14,14 @@ function Login() {
     <div>
       {t('Welcome to React')}
       <div className="h-screen">
-        Login works!
-
+        Login works!123
+        <div>
+          <div className="wh-5 i-carbon-close text-red"></div>
+          <DarkToggle />
+          <MoonIcon className="wh-5 text-red" />
+          <SunIcon className="wh-5 text-red" />
+          <ReactLogo className="wh-5 text-red" />
+        </div>
         <button type="button" className="border-1 border-border" onClick={() => setLang('zh')}>changeLang</button>
         <div className="my-10 border-1"></div>
         <B></B>
